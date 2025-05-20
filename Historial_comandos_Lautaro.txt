@@ -1,0 +1,47 @@
+ssh-keygen -t ed25519
+cat ~/.ssh/*.pub
+mkdir repogit
+cd repogit
+git clone git@github.com:lauta98/TP1_AySO.git
+cd TP1_AySO
+pwd
+ls -l
+cat /etc/os-release
+cat README.md
+man grep
+grep HOME_URL /etc/os-release
+grep home_url /etc/os-release
+grep -i home_url /etc/os-release
+grep HOME_URL /etc/os-release
+grep home_url /etc/os-release
+whoami
+echo "vagrant=$(whoami)" > datos_usuario.txt
+cat datos_usuario.txt
+git add datos_usuario.txt
+git config --global user.name
+git config --global user.email
+git config --global user.name "lauta98"
+git config --global user.email "lauta.dq@gmail.com"
+git config --global user.name
+git config --global user.email
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+git status
+git push origin main
+grep
+grep --help
+cpu_model=$(grep "model name" /proc/cpuinfo | head -n1)
+echo "$cpu_model"
+echo "$cpu_model" >> datos_usuario.txt
+git add datos_usuario.txt
+git commit -m "feat: Añadiendo información de CPU"
+git push
+cat <<EOF >> README.md
+Alumno: Lautaro Rey
+División: 313
+Turno: Noche
+EOF
+
+git add README.md
+git commit -m "ADD: Añadiendo Readme y datos de usuario"
+git push
+history -a
